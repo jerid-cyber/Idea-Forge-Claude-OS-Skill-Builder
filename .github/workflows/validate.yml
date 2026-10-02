@@ -1,0 +1,19 @@
+name: Validate Skill Forge
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Lint community pattern library
+        run: python skills/skill-forge/scripts/patterns.py lint skills/skill-forge/patterns/community-patterns.md
+      - name: Validate the skill
+        run: python skills/skill-forge/scripts/validate_skill.py skills/skill-forge
+      - name: Run test suite
+        run: python tests/run_tests.py
