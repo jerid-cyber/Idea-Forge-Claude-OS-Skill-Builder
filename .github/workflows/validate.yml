@@ -1,4 +1,4 @@
-name: Validate Skill Forge
+name: Validate Idea Forge
 on:
   pull_request:
   push:
@@ -12,8 +12,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: Lint community pattern library
-        run: python skills/skill-forge/scripts/patterns.py lint skills/skill-forge/patterns/community-patterns.md
+        run: python skills/idea-forge/scripts/patterns.py lint skills/idea-forge/patterns/community-patterns.md
       - name: Validate the skill
-        run: python skills/skill-forge/scripts/validate_skill.py skills/skill-forge
+        run: python skills/idea-forge/scripts/validate_skill.py skills/idea-forge
       - name: Run test suite
         run: python tests/run_tests.py

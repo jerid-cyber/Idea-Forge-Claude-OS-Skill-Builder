@@ -34,7 +34,7 @@ TODO core steps, rules (with reasons), and judgment calls.
 TODO what this skill deliberately does not do.
 
 ## Field notes
-When something about this skill clearly fails or frustrates the user (a wrong assumption, a missing case, a repeated correction), note it briefly. Where files persist, append one dated line to `field-notes/{name}.md` in the working folder. Where they don't, and only if the issue was significant, mention at the end of your reply that the user can paste the note into Skill Forge to improve this skill. Keep it to one line; never interrupt the task for this.
+When something about this skill clearly fails or frustrates the user (a wrong assumption, a missing case, a repeated correction), note it briefly. Where files persist, append one dated line to `field-notes/{name}.md` in the working folder. Where they don't, and only if the issue was significant, mention at the end of your reply that the user can paste the note into Idea Forge to improve this skill. Keep it to one line; never interrupt the task for this.
 """
 
 
@@ -79,7 +79,7 @@ def main():
 
     bp = HERE / "references" / "blueprint.md"
     (root / "BLUEPRINT.md").write_text(
-        f"# Skill Blueprint: {a.name}\n\nFill from the template in Skill Forge's references/blueprint.md.\n",
+        f"# Skill Blueprint: {a.name}\n\nFill from the template in Idea Forge's references/blueprint.md.\n",
         encoding="utf-8")
 
     print(f"Created {root}")

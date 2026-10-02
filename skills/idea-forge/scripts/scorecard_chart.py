@@ -150,7 +150,7 @@ def main():
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(a.title)}</title><style>{CSS}</style></head><body><main>
-<h1>{html.escape(a.title)}</h1><p class="muted">Each skill scored 1–5 on Bigger, Better, Stronger, Faster, and Triggering. Built with Skill Forge.</p>
+<h1>{html.escape(a.title)}</h1><p class="muted">Each skill scored 1–5 on Bigger, Better, Stronger, Faster, and Triggering. Built with Idea Forge.</p>
 {''.join(sections)}</main></body></html>"""
     Path(a.output).write_text(doc, encoding="utf-8")
     print(f"Wrote {a.output} ({len(sections)} skill(s))")

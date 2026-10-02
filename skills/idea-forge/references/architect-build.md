@@ -50,7 +50,7 @@ Add a short section near the end of each generated skill so it can feed future E
 
 ```markdown
 ## Field notes
-When something about this skill clearly fails or frustrates the user (a wrong assumption, a missing case, a repeated correction), note it briefly. Where files persist, append one dated line to `field-notes/<skill-name>.md` in the working folder. Where they don't, and only if the issue was significant, mention at the end of your reply that the user can paste the note into Skill Forge to improve this skill. Keep it to one line; never interrupt the task for this.
+When something about this skill clearly fails or frustrates the user (a wrong assumption, a missing case, a repeated correction), note it briefly. Where files persist, append one dated line to `field-notes/<skill-name>.md` in the working folder. Where they don't, and only if the issue was significant, mention at the end of your reply that the user can paste the note into Idea Forge to improve this skill. Keep it to one line; never interrupt the task for this.
 ```
 
 Keep the hook light. A skill that nags about feedback is worse than one without the hook.

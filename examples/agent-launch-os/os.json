@@ -1,0 +1,93 @@
+{
+  "name": "agent-launch-os",
+  "version": "0.2.0",
+  "mission": "Get every new agent to their first appointment within 30 days.",
+  "scoreboard": {
+    "metric": "Days from start to first appointment",
+    "baseline": "45",
+    "target": "30",
+    "file": "os/scoreboard.md"
+  },
+  "brain": {
+    "file": "os/brain.md",
+    "fields": [
+      "profile",
+      "sphere",
+      "call_log",
+      "appointments",
+      "current_state",
+      "next_moves"
+    ]
+  },
+  "orchestrator": "agent-launch-command-center",
+  "setup": "agent-launch-brain-setup",
+  "heartbeat": {
+    "skill": "agent-launch-heartbeat",
+    "cadence": "daily"
+  },
+  "logs": {
+    "actions": "os/action-log.md",
+    "approvals": "os/approvals.md"
+  },
+  "components": [
+    {
+      "skill": "sphere-builder",
+      "job": "Sphere builder",
+      "reads": [
+        "profile"
+      ],
+      "writes": [
+        "sphere"
+      ],
+      "hands_off_to": [
+        "daily-call-coach"
+      ],
+      "authority": "auto",
+      "wave": 1
+    },
+    {
+      "skill": "daily-call-coach",
+      "job": "Daily call coach",
+      "reads": [
+        "profile",
+        "sphere",
+        "call_log"
+      ],
+      "writes": [
+        "call_log"
+      ],
+      "hands_off_to": [
+        "appointment-tracker"
+      ],
+      "authority": "suggest",
+      "wave": 1
+    },
+    {
+      "skill": "appointment-tracker",
+      "job": "Appointment tracker",
+      "reads": [
+        "call_log"
+      ],
+      "writes": [
+        "appointments"
+      ],
+      "hands_off_to": [],
+      "authority": "auto",
+      "wave": 1
+    },
+    {
+      "skill": "open-house-planner",
+      "job": "Open house planner",
+      "reads": [
+        "profile",
+        "appointments"
+      ],
+      "writes": [
+        "current_state"
+      ],
+      "hands_off_to": [],
+      "authority": "approve",
+      "wave": 2
+    }
+  ]
+}

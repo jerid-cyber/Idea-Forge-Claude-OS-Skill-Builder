@@ -72,7 +72,7 @@ def main():
     for _, name, desc in metas:
         short = desc.split(". ")[0].rstrip(".") + "." if desc else ""
         lines.append(f"- **{name}**: {short}")
-    lines += ["", "Built with Skill Forge (Family Forge).", ""]
+    lines += ["", "Built with Idea Forge (Family Forge).", ""]
     (root / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
     print(f"Created plugin {root}")

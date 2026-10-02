@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>agent-launch-os system map</title><style>
+:root{--bg:#faf8f5;--fg:#1f1d1a;--muted:#6d675f;--card:#fff;--line:#e4dfd7;--accent:#d9622b;--soft:#fbeee6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181715;--fg:#efebe5;--muted:#a59f96;--card:#22201d;--line:#3a3631;--soft:#3a2a20}}
+:root[data-theme="dark"]{--bg:#181715;--fg:#efebe5;--muted:#a59f96;--card:#22201d;--line:#3a3631;--soft:#3a2a20}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;padding:20px}
+main{max-width:1100px;margin:0 auto}h1{margin:0}h2{font-size:16px;margin:22px 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.muted{color:var(--muted)}code{font-size:12.5px}
+.control{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.node{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.node.core{border:2px solid var(--accent);background:var(--soft)}.node b{display:block}.node small{color:var(--muted)}
+.flow{color:var(--muted);font-size:13px;margin:10px 0 0}
+.group{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.group h3{margin:0 0 10px;font-size:15px}.count{color:var(--muted);font-weight:400}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.chip{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13px}
+.chip b{font-size:13.5px;word-break:break-word}.chip p{margin:4px 0 0;color:var(--muted)}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;color:#fff;margin-left:6px;vertical-align:1px}
+.to{color:var(--accent);font-size:12px;margin-top:4px}
+.issues{border-left:4px solid var(--accent);padding:10px 14px;background:var(--card);border-radius:8px}
+.issues li{margin:3px 0}.ok{border-left-color:#2ba36b}
+.legend span{margin-right:12px;font-size:13px}
+</style></head>
+<body><main><h1>agent-launch-os system map</h1>
+<p class="muted">Get every new agent to their first appointment within 30 days. · 4 components</p>
+<h2>Control layer</h2><div class="control"><div class="node"><small>Heartbeat · daily</small><b><code>agent-launch-heartbeat</code></b></div><div class="node core"><small>Orchestrator</small><b><code>agent-launch-command-center</code></b></div><div class="node"><small>Setup</small><b><code>agent-launch-brain-setup</code></b></div><div class="node"><small>Shared brain</small><b><code>os/brain.md</code></b><small>profile, sphere, call_log, appointments, current_state, next_moves</small></div><div class="node"><small>Scoreboard</small><b>Days from start to first appointment</b></div></div>
+<p class="flow">Heartbeat runs the orchestrator → it reads the brain, picks the next move, and routes to a component → the component writes back to the brain.</p>
+<h2>Health</h2><div class="issues ok">No issues found by validate_os.py.</div>
+<h2>Components</h2><p class="legend"><span><span class="badge" style="background:#2ba36b">Auto</span></span><span><span class="badge" style="background:#d9622b">Approve</span></span><span><span class="badge" style="background:#2b7bd9">Suggest</span></span></p><div class="group"><h3>Wave 1 <span class="count">· 3</span></h3><div class="chips"><div class="chip"><b>appointment-tracker</b><span class="badge" style="background:#2ba36b">Auto</span><p>Appointment tracker</p><p>reads call_log · writes appointments</p></div><div class="chip"><b>daily-call-coach</b><span class="badge" style="background:#2b7bd9">Suggest</span><p>Daily call coach</p><p>reads profile, sphere, call_log · writes call_log</p><div class="to">→ appointment-tracker</div></div><div class="chip"><b>sphere-builder</b><span class="badge" style="background:#2ba36b">Auto</span><p>Sphere builder</p><p>reads profile · writes sphere</p><div class="to">→ daily-call-coach</div></div></div></div><div class="group"><h3>Wave 2 <span class="count">· 1</span></h3><div class="chips"><div class="chip"><b>open-house-planner</b><span class="badge" style="background:#d9622b">Approve</span><p>Open house planner</p><p>reads profile, appointments · writes current_state</p></div></div></div>
+<p class="muted">Built with Idea Forge.</p></main></body></html>

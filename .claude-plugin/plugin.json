@@ -1,15 +1,17 @@
 {
-  "name": "skill-forge",
-  "version": "1.1.0",
-  "description": "Turns raw ideas, notes, voice dictation, research, and AI chat transcripts into fully built, tested, continuously improving Claude skills, with Temper, a proactive suggestion loop; Family Forge for organizing skills into plugins; visual scorecards; and a community pattern library.",
+  "name": "idea-forge",
+  "version": "2.1.0",
+  "description": "Idea Forge, Your Claude OS & Skill Builder. Turns raw ideas, notes, voice dictation, and research into tested Claude skills, plugin families, and complete operating systems, with Temper (a proactive suggestion loop), OS validation and system maps, Family Forge, visual scorecards, and a community pattern library.",
   "author": {
     "name": "Jerid Wempen"
   },
   "license": "PolyForm Internal Use 1.0.0",
   "keywords": [
     "skills",
+    "operating-system",
     "skill-builder",
-    "prompt-engineering",
+    "agents",
+    "plugins",
     "knowledge-architecture",
     "productivity"
   ]

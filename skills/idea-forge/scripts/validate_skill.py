@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a skill folder built by Skill Forge.
+"""Validate a skill folder built by Idea Forge.
 
 Usage: python validate_skill.py <path-to-skill-folder>
 
@@ -107,7 +107,7 @@ def main(path):
             errors.append(f"'{f.relative_to(root)}' still contains TODO placeholders.")
 
     # Field notes hook
-    if "field notes" not in text.lower() and name != "skill-forge":
+    if "field notes" not in text.lower() and name != "idea-forge":
         warnings.append("No 'Field notes' section; Evolve won't get real-use feedback.")
 
     for e in errors:

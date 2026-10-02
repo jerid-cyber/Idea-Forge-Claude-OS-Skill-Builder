@@ -1,6 +1,6 @@
 ---
 name: Pattern proposal
-about: Share a lesson from your forges with every Skill Forge user
+about: Share a lesson from your forges with every Idea Forge user
 title: "Pattern: <short name>"
 labels: pattern-proposal
 ---
