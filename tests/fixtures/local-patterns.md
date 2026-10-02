@@ -1,0 +1,4 @@
+- **Judgment skills need 3+ worked examples, including one where the obvious answer is wrong.** — dup of community (source: seed)
+- **Ask about the audience before the format.** — The audience changes the right format more often than the reverse. (source: proposal-writer, 2026-10-10)
+- **Email me at jerid@example.com about this pattern.** — Direct contact speeds up follow-up. (source: test, 2026-10-10)
+- **too short** — x (source: y)

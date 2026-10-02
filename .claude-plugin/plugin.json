@@ -1,0 +1,16 @@
+{
+  "name": "skill-forge",
+  "version": "1.1.0",
+  "description": "Turns raw ideas, notes, voice dictation, research, and AI chat transcripts into fully built, tested, continuously improving Claude skills, with Temper, a proactive suggestion loop; Family Forge for organizing skills into plugins; visual scorecards; and a community pattern library.",
+  "author": {
+    "name": "Jerid Wempen"
+  },
+  "license": "PolyForm Internal Use 1.0.0",
+  "keywords": [
+    "skills",
+    "skill-builder",
+    "prompt-engineering",
+    "knowledge-architecture",
+    "productivity"
+  ]
+}
